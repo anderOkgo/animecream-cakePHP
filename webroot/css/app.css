@@ -1,0 +1,36 @@
+ #panelBusqueda >button.btn.label{
+      padding: .5em .2em .5em .2em;
+      margin: .2em;
+      min-width: 70px;
+    }
+
+    .responsivegrid{
+      overflow-x:auto;
+      width: 100%;
+    }
+
+    .flexline{
+      display: inline-flex;
+    }
+
+
+    div::-webkit-scrollbar {
+      width: 6px; /*=> ancho del scroll*/
+     background-color: #104858; /*=> Color del fondo principal */
+   }
+   div::-webkit-scrollbar-track {
+     width: 6px;
+     background-color: #ffffff;
+   }
+   div::-webkit-scrollbar-thumb{
+     width: 6px;
+     background-color: #104858; /*=> color del indicador del scroll */
+     border-radius: 10px; /*=> bordes redondeados */
+     background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.3) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.3) 50%,rgba(255,255,255,.3) 75%,transparent 75%,transparent);
+   }
+
+   .targetabusqueda {
+    border-radius: .7em;
+    box-shadow: 1px 1px 1px 1px 15px #888888;
+    padding: .15em 1em 1em 1em;
+}

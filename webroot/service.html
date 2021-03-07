@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="/js/jquery-2.2.4.min.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/animecream.js"></script>
+</head>
+
+<body>
+
+  <script>
+/*var xhr = new XMLHttpRequest();
+xhr.open("GET", "/producciones/ciencia-ficcion.json", true);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4) {
+    // WARNING! Might be injecting a malicious script!
+    document.write(xhr.responseText);
+  }
+}
+xhr.send();*/
+
+    $.getJSON( "https://www.animecream.com/producciones/ciencia-ficcion.json", function( json ) {
+  document.write( json["recipes"][0]["name"] );
+ });
+
+ /*   $.ajax({
+        url : "/producciones/ciencia-ficcion.json",
+        dataType:"jsonp",
+        jsonp:"app",
+        success:function(data)
+        {
+            document.write( json["recipes"][0]["name"] );
+        }
+    });*/
+
+    
+  </script>
+   
+    <footer class="footer">
+  <div class="navbar-inverse">
+    <p class="text-muted">Copyright © 2018 Animecream <span id="Anderin">@anderOkgo</span>  Todos los derechos reservados.</p>
+  </div>
+</footer>

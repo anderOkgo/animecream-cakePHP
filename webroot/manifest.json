@@ -1,0 +1,45 @@
+{
+  "short_name": "Animecream",
+  "name": "La crema del anime",
+"icons": [
+  {
+   "src": "img/icon/android-icon-36x36.png",
+   "sizes": "36x36",
+   "type": "imageimg/icon/png"
+  },
+  {
+   "src": "img/icon/android-icon-48x48.png",
+   "sizes": "48x48",
+   "type": "imageimg/icon/png"
+  },
+  {
+   "src": "img/icon/android-icon-72x72.png",
+   "sizes": "72x72",
+   "type": "imageimg/icon/png"
+  },
+  {
+   "src": "img/icon/android-icon-96x96.png",
+   "sizes": "96x96",
+   "type": "imageimg/icon/png"
+  },
+  {
+   "src": "img/icon/android-icon-144x144.png",
+   "sizes": "144x144",
+   "type": "imageimg/icon/png"
+  },
+  {
+   "src": "img/icon/android-icon-192x192.png",
+   "sizes": "192x192",
+   "type": "imageimg/icon/png"
+  },
+  {
+    "src": "img/icon/android-icon-512x512.png",
+   "sizes": "512x512",
+   "type": "imageimg/icon/png"
+ }
+ ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#105969",
+  "display": "standalone",
+  "theme_color": "#105969"
+}

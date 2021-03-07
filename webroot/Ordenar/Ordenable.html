@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orden</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+.contenedor {
+  max-width: 900px;
+}
+</style>
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <script src="jquery.ui.touch-punch.min.js"></script> -->
+<script>
+  !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"dblclick"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+</script>
+<script>$('#widget').draggable();</script>
+<script>
+  $( "#sortable" ).sortable();
+  $( "#sortable" ).disableSelection();
+</script>
+</head>
+
+<body>
+  <div class="contenedor">
+    <div id="zona" class="zona">
+      <button id="11">anna</button>
+      <button id="12">maria</button>
+      <button id="13">stefania</button>
+      <button id="14">mariu</button>
+      <button id="15">linda</button>
+      <button id="16">danna</button>
+      <button id="17">freya</button>
+      <button id="18">arcy</button>
+      <button id="19">tyffa</button>
+      <button id="20">Caro</button>
+      <select id="selector" name="listas"></select>
+    </div>
+
+    <input id="inpAgregar" type="text">
+    <button id="agregarLista">Agregar lista</button>
+    <div id="result"></div>
+    <ul id="sortable"></ul>
+    <button id="actualizar">Actualizar</button>
+    <button id="borrar">Borrar toda la lista</button>
+  </div>
+  <script>
+    $(document).ready(function() {
+
+      cargarOption();
+      imprimirLista($("#selector option:selected").text());
+      agregarEventoEliminarLi();
+
+      $("#selector").change(function() {
+        imprimirLista($("#selector option:selected").text());
+        agregarEventoEliminarLi();
+        habilitarOrden();
+      });
+
+      $(".zona > button").click(function() {
+        agregarRegistro($(this).attr("id"),$(this).text());
+      });
+
+      $("#actualizar").click(function() {
+        actulizarLista();
+      });
+
+      $("#borrar").click(function() {
+        borrarLista($(this).siblings("ul"));
+      });
+
+      $("#agregarLista").click(function() {
+        agregarLista();
+      });
+
+      function cargarOption() {
+        $("#selector option").remove();
+        for (x = 0; x <= localStorage.length - 1; x++) {
+          clave = localStorage.key(x);
+          $("#selector").append('<option value="' + clave + '">' + clave + "</option>");
+        }
+      }
+
+      function agregarRegistro(id,nombre) {
+        if ($("#selector option:selected").text()=="") {
+          alert("agrege una lista");
+        }else{
+          valor ="{" + '"id"' + ":"+ id+"," + '"nombre"' +":" + '"'+nombre +'"' +"}";
+         var alma = localStorage.getItem($("#selector option:selected").text());
+         if (!alma) {
+          alma = "*";
+        }
+        localStorage.setItem($("#selector option:selected").text(), alma + "-~-" + valor);
+        $("#result").html(localStorage.getItem($("#selector option:selected").text()));
+        $("#sortable").append('<li id="' +id +'" class="ui-state-default ui-sortable-handle"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>' +nombre +"</li>");
+        agregarEventoEliminarLi();
+        }
+       
+      }
+
+      function actulizarLista() {
+        localStorage.removeItem($("#selector option:selected").text());
+        $("#sortable li").each(function() {
+          valor ="{" + '"id"' + ":"+ $(this).attr("id")+"," + '"nombre"' +":" + '"'+ $(this).text() +'"' +"}";
+          var alma = localStorage.getItem($("#selector option:selected").text());
+          if (!alma) {
+            alma = "*";
+          }
+          localStorage.setItem($("#selector option:selected").text(),alma + "-~-" + valor);
+        });
+        $("#result").html(localStorage.getItem($("#selector option:selected").text()));
+      }
+
+      function imprimirLista(lista) {
+        var res = "";
+        var array = "";
+        $("#sortable li").remove();
+        var strg = localStorage.getItem(lista);
+        $("#result").html(localStorage.getItem(lista));
+        if (!strg) {
+          strg = "*";
+        }
+        if (strg !== "*") {
+          res = strg.replace("*-~-", "");
+          array = res.split("-~-");
+          $.each(array, function(index, value) {
+            val = JSON.parse(value);
+            $("#sortable").append('<li id="' +val.id +'" class="ui-state-default ui-sortable-handle"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span> ' +val.nombre +"</li>");
+          });
+          habilitarOrden();
+          agregarEventoEliminarLi();
+        }
+      }
+
+      function borrarLista(elemento) {
+        localStorage.removeItem($("#selector option:selected").text());
+        $("#result").html(localStorage.getItem($("#selector option:selected").text()));
+        habilitarOrden();
+        cargarOption();
+        imprimirLista($("#selector option:selected").text());
+
+      }
+
+      function agregarLista() {
+        $("#nolista").remove();
+        clave = $("#inpAgregar").val();
+        if (clave !== "") {
+          localStorage.setItem(clave, "*");
+          $("#selector").append('<option selected value="' + clave + '">' + clave + "</option>");
+          imprimirLista(clave);
+          $("#inpAgregar").val("");
+          habilitarOrden();
+        }
+      }
+
+      function habilitarOrden() {
+        $("#sortable").sortable();
+        $( "#sortable" ).disableSelection();
+      }
+
+      function agregarEventoEliminarLi() {
+        $("li").dblclick(function() {
+          $(this).remove();
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>

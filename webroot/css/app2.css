@@ -1,0 +1,94 @@
+.targetas
+{
+	width: 796px;
+	margin-top: 1.7em;
+}
+
+#capa1
+{
+	position: relative;
+	width: 150px;
+}
+
+#capa2
+{
+	position: absolute;
+	text-align: center;
+	color: white;
+	opacity:0.9;
+	background-color: black;
+	height: 40px;
+	width: 150px;
+	padding: 2px;
+	bottom: .3em;
+	text-shadow: 1px 2px #000;
+	font-weight: bold;
+}
+
+.linea
+{
+	display: inline-grid;
+	width: 150px;
+}
+
+.paquete
+{
+	/*   transform: rotate(-90deg);*/
+	box-shadow: 1px 1px 15px #888888;
+	background-color: #f1f0f7;
+}
+
+.cent
+{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	line-height: 1.1;
+}
+
+.cento
+{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.foott
+{
+	/*letter-spacing: .05em;*/
+	color: white;
+	text-shadow: -1px -1px 1px #b19855, 1px 1px 1px #1d1d1c;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	text-align: center;
+/*	text-transform: uppercase;*/
+	text-rendering: optimizeLegibility;
+	background: #105969;
+	opacity: 1;
+	/*font-weight: bold;*/
+	font-size: 15px;
+	padding: 2px;
+}
+
+.container {
+	max-width: 830px;
+/*    padding-left: 5px !important;
+    margin-left:  3em !important;*/
+}
+
+.responsivegrid{
+	overflow-x:auto;
+	width: 100%;
+}
+
+.flex-container {
+    align-items: center;
+    justify-content: center;
+}
+
