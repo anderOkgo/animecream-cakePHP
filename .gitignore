@@ -9,7 +9,7 @@ dist/
 
 config/app.php
 tmp/
-
+webroot/img/tarjeta/
 
 
 
