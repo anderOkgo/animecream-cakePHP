@@ -12,14 +12,13 @@ self.addEventListener('install', e => {
         `/js/animecream.js`,
         `/js/filesaver.js`,
         `/js/html2canvas.js`,
-        `/js/animecream.js`,
         `/js/app.js`,
         `/js/app2.js`,
         `/css/bootstrap.min.css`,
         `/css/animecream.css`,
         `/css/jquery-ui.min.css`,
         `/css/app.css`,
-        `/css/app2.css`/*,
+        `/css/app2.css`,
         `/img/tarjeta/1.jpg`,
         `/img/tarjeta/2.jpg`,
         `/img/tarjeta/3.jpg`,
@@ -452,7 +451,7 @@ self.addEventListener('install', e => {
 		`/img/tarjeta/430.jpg`,
 		`/img/tarjeta/431.jpg`,
 		`/img/tarjeta/432.jpg`,
-		`/img/tarjeta/433.jpg`*/
+		`/img/tarjeta/433.jpg`
       ])
           .then(() => self.skipWaiting());
     })
@@ -463,7 +462,29 @@ self.addEventListener('activate', event => {
   event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', event => {
+   
+
+
+/*self.addEventListener('fetch', (e) => {
+    console.log('[Servicio Worker] Recurso obtenido ' + e.request.url);
+});*/
+
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    caches.match(e.request).then((r) => {
+          console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
+      return r || fetch(e.request).then((response) => {
+                return caches.open(cacheName).then((cache) => {
+          console.log('[Servicio Worker] Almacena el nuevo recurso: '+e.request.url);
+          cache.put(e.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
+});
+
+/*self.addEventListener('fetch', event => {
   event.respondWith(
     caches.open(cacheName)
       .then(cache => cache.match(event.request, {ignoreSearch: true}))
@@ -471,4 +492,4 @@ self.addEventListener('fetch', event => {
       return response || fetch(event.request);
     })
   );
-});
+});*/
