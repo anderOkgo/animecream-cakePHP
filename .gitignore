@@ -6,10 +6,13 @@
 # Node artifact files
 node_modules/
 dist/
+
+config/app.php
 tmp/
 tmp/cache/
-webroot/img
-tmp/cache
+webroot/img/
+tmp/cache/
+
 
 # Compiled Java class files
 *.class
@@ -53,8 +56,3 @@ Thumbs.db
 *.mov
 *.wmv
 
-config/app.php
-tmp/
-tmp/cache/
-webroot/img
-tmp/cache
