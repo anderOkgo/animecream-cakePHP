@@ -469,7 +469,7 @@ self.addEventListener('activate', event => {
     console.log('[Servicio Worker] Recurso obtenido ' + e.request.url);
 });*/
 
-self.addEventListener('fetch', (e) => {
+/*self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((r) => {
           console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
@@ -482,14 +482,14 @@ self.addEventListener('fetch', (e) => {
       });
     })
   );
-});
+});*/
 
-/*self.addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
   event.respondWith(
     caches.open(cacheName)
       .then(cache => cache.match(event.request, {ignoreSearch: true}))
-      .then(response => {
+      /*.then(response => {
       return response || fetch(event.request);
-    })
+    })*/
   );
-});*/
+});
