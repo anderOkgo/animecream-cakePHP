@@ -19,7 +19,7 @@ self.addEventListener('install', e => {
         `/css/animecream.css`,
         `/css/jquery-ui.min.css`,
         `/css/app.css`,
-        `/css/app2.css`,
+        `/css/app2.css`/*,
         `/img/tarjeta/1.jpg`,
         `/img/tarjeta/2.jpg`,
         `/img/tarjeta/3.jpg`,
@@ -452,36 +452,7 @@ self.addEventListener('install', e => {
 		`/img/tarjeta/430.jpg`,
 		`/img/tarjeta/431.jpg`,
 		`/img/tarjeta/432.jpg`,
-		`/img/tarjeta/433.jpg`,
-		`/img/tarjeta/434.jpg`,
-		`/img/tarjeta/435.jpg`,
-		`/img/tarjeta/436.jpg`,
-		`/img/tarjeta/437.jpg`,
-		`/img/tarjeta/438.jpg`,
-		`/img/tarjeta/439.jpg`,
-		`/img/tarjeta/440.jpg`,
-		`/img/tarjeta/441.jpg`,
-		`/img/tarjeta/442.jpg`,
-		`/img/tarjeta/443.jpg`,
-		`/img/tarjeta/444.jpg`,
-		`/img/tarjeta/445.jpg`,
-		`/img/tarjeta/446.jpg`,
-		`/img/tarjeta/447.jpg`,
-		`/img/tarjeta/448.jpg`,
-		`/img/tarjeta/449.jpg`,
-		`/img/tarjeta/450.jpg`,
-		`/img/tarjeta/451.jpg`,
-		`/img/tarjeta/452.jpg`,
-		`/img/tarjeta/453.jpg`,
-		`/img/tarjeta/454.jpg`,
-		`/img/tarjeta/455.jpg`,
-		`/img/tarjeta/456.jpg`,
-		`/img/tarjeta/457.jpg`,
-		`/img/tarjeta/458.jpg`,
-		`/img/tarjeta/459.jpg`,
-		`/img/tarjeta/460.jpg`,
-		`/img/tarjeta/461.jpg`
-
+		`/img/tarjeta/433.jpg`*/
       ])
           .then(() => self.skipWaiting());
     })
@@ -492,7 +463,7 @@ self.addEventListener('activate', event => {
   event.waitUntil(self.clients.claim());
 });
 
-/*self.addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
   event.respondWith(
     caches.open(cacheName)
       .then(cache => cache.match(event.request, {ignoreSearch: true}))
@@ -500,4 +471,4 @@ self.addEventListener('activate', event => {
       return response || fetch(event.request);
     })
   );
-});*/
+});

@@ -9,9 +9,8 @@ dist/
 
 config/app.php
 tmp/
-tmp/cache/
-webroot/img/
-tmp/cache/
+webroot/img/tarjeta/
+
 
 
 # Compiled Java class files
