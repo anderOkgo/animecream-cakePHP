@@ -145,6 +145,9 @@
                 <button type="button" class="btn btn-sm"><?= $this->Html->link(__("2017"), ["controller" => "Productions", "action" => "app",2017]) ?></button>
                 <button type="button" class="btn btn-sm"><?= $this->Html->link(__("2018"), ["controller" => "Productions", "action" => "app",2018]) ?></button>
                 <button type="button" class="btn btn-sm"><?= $this->Html->link(__("2019"), ["controller" => "Productions", "action" => "app",2019]) ?></button>
+                <hr>
+                <button type="button" class="btn btn-sm"><?= $this->Html->link(__("2020"), ["controller" => "Productions", "action" => "app",2020]) ?></button>
+                <button type="button" class="btn btn-sm"><?= $this->Html->link(__("2021"), ["controller" => "Productions", "action" => "app",2021]) ?></button>
                 <p></p>
               </div>
             </div>
@@ -167,12 +170,12 @@
 
             </div>
 
-            <div class="targetalateral"> 
+           <!--  <div class="targetalateral"> 
               <amp-auto-ads type="adsense"
                 data-ad-client="ca-pub-2618982977638862">
-              </amp-auto-ads>
+              </amp-auto-ads> -->
 
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle"
                  style="display:block; text-align:center;"
                  data-ad-layout="in-article"
@@ -181,9 +184,9 @@
                  data-ad-slot="4321050829"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
             	
-            </div>
+           <!--  </div> -->
 
             <script>
               var code=$("#lateral").html();
