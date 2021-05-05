@@ -169,15 +169,15 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
           <?php endif; ?>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li>
+         <!--  <li>
            <a href="/politica-privacidad.html">Política de Privacidad</a>
          </li>
          <li>
          	<a href="/acerca.html">Acerca de</a>
-         </li>
-         <li>
+         </li> -->
+         <!-- <li>
          	<a href="/especiales/contacto/">Contacto</a>
-         </li>
+         </li> -->
         <?php if(isset($current_user)): ?>
           <li>
            <?= $this->Html->link('Salir', ['controller' => 'Users', 'action' => 'logout']) ?>
