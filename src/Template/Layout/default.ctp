@@ -150,11 +150,11 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
               <li><?= $this->Html->link(__('Top Animes 00s'), ['controller' => 'Productions', 'action' => 'app',"00s"]) ?></li>
               <li><?= $this->Html->link(__('Top Animes 10s'), ['controller' => 'Productions', 'action' => 'app',"10s"]) ?></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/especiales/">Especiales</a></li>
+              <!-- <li><a href="/especiales/">Especiales</a></li> -->
             </ul>
           </li>
           <li><a aria-label="sigueme en" href="https://www.youtube.com/channel/UC1tCm6nZothAhbp_9dFzmNQ" target="_blank" rel="noopener">YouTube<span class="sr-only">(current)</span></a></li>
-          <li><a href="https://www.animecream.com/especiales/">Especiales</a></li>
+          <!-- <li><a href="https://www.animecream.com/especiales/">Especiales</a></li> -->
            <?php if(isset($current_user)): ?>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menú <span class="caret"></span></a>
