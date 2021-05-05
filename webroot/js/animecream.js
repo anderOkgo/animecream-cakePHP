@@ -1,5 +1,18 @@
  $(document).ready(function() {
 
+  document.addEventListener("click", e => {
+    if (e.target.matches(".g2")) {
+      if(location.pathname.includes("producciones2")) {
+        let URLactual = window.location;
+        URLactual=String(URLactual);
+        let res = URLactual.replace("producciones2", "producciones");
+        window.location.href = res;
+      } else {
+        document.getElementById("btnCambiarCuadricula").click();
+      }
+    }
+  })
+
   cargarOption();
   listaactual();
 

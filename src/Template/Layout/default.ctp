@@ -109,8 +109,23 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <?= $this->Html->script(['jquery-2.2.4.min','jquery-ui.min','bootstrap.min','animecream','select2'])?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+    <link rel="stylesheet" href="/css/dom-ejercicios.css">
 </head>
 <body>
+
+<button class="panel-btn hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+</button>
+
+<aside class="panelx ">
+  <br>
+  <div class="container">
+    <?php echo  $this->element('lateral'); ?>
+  </div>
+</aside>
     <nav>
     <div class="container-fluid navbar-inverse navbar-fixed-top">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -205,6 +220,8 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
         });
       }
     </script>
+
+<script src="/js/index_dom.js" type="module"></script>
   
 
     <?= $this->Flash->render() ?>

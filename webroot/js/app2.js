@@ -3,9 +3,9 @@ $(".linea").dblclick(function(){
 	});
 
 	function cambiarG(){
-		var URLactual = window.location;
+		let URLactual = window.location;
 		URLactual=String(URLactual);
-		var res = URLactual.replace("producciones2", "producciones");
+		let res = URLactual.replace("producciones2", "producciones");
 		window.location.href = res;
 	}
 

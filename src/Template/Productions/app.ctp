@@ -8,6 +8,7 @@ $url= $_SERVER["REQUEST_URI"];
 </script>
 <link rel="stylesheet" href="/css/app.css">
 
+
 <div id="dialog-confirm" title="Borrar Lista"></div>
 <section class="col-xs-12 col-md-8 ">
   <div class="targetalateral">
@@ -129,6 +130,7 @@ $url= $_SERVER["REQUEST_URI"];
 	<?php echo  $this->element('lateral'); ?>
 </aside>
 <script src="/js/app.js"></script>
+
 <script>
 	/*(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
