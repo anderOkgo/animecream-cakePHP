@@ -43,7 +43,7 @@ video {
 
 .header {
   position: sticky;
-  z-index: 997;
+  z-index: 99;
   top: 0;
   padding: 1rem;
   background-color: var(--main-color);
@@ -68,7 +68,7 @@ video {
 
 .panelx {
   position: fixed;
-  z-index: 998;
+  z-index: 100;
   top: 0;
   bottom: 0;
   left: 0;
