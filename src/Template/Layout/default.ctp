@@ -114,7 +114,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 </head>
 <body>
 
-<button class="panel-btn hamburger hamburger--vortex" type="button">
+<button class="panel-btn hamburger hamburger--vortex visible-xs" type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
