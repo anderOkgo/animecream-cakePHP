@@ -1,9 +1,16 @@
 {
-    "short_name": "Animecream",
     "name": "La crema del anime",
+    "short_name": "Animecream",
+    "description": "Lo mejor del anime",
+    "start_url": "./?utm_source=homescreen",
+    "background_color": "#105969",
+    "display": "standalone",
+    "scope": "./",
+    "orientation": "portrait",
+    "theme_color": "#105969",
     "icons": [
         {
-            "src": "img/icon/android-icon-32x32.png",
+            "src": "./img/icon/android-icon-32x32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
@@ -62,12 +69,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "start_url": "./?utm_source=homescreen",
-    "background_color": "#105969",
-    "display": "standalone",
-    "scope": "./",
-    "orientation": "portrait",
-    "theme_color": "#105969",
-    "description": "Lo mejor del anime"
+    ]
 }
