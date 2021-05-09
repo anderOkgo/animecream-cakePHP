@@ -1,7 +1,7 @@
 const VERSION = "1.1.17";
 const CACHE_NAME = `animecream-${VERSION}`;
 const imagenes = [];
-const appfiles = [];
+let appfiles = [];
 
 for (let i = 1; i <= 435; i++) {
     imagenes.push(`./img/tarjeta/${i}.jpg`);
