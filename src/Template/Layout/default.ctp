@@ -75,11 +75,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <meta property="og:image:height" content="600">
     <meta property="og:description" content="♡ Top 100 anime all time, Veo que estás buscando RECOMENDACIONES de anime. [ shonen - shojo - romántico ♡ etc ], ¿Quizás los mejores animes de y desde siempre?.  Tenemos todas las clasificaciones, Top 10 - recomendaciones de lo mejor cada año, etc. ¡ADEMAS!  ✏ Crea tus propias listas e imágenes de estas, guárdalas, compártelas y MUCHO MAS...  ¡Dale un vistazo!  se que te va a gustar.  ¡VAMOS! entra y nos cuentas tu experiencia y si has encontrado tus mejores animes, [BIENVENID@S].">
     
-    <meta name='mobile-web-app-capable' content='yes'>
-    <meta name='apple-mobile-web-app-capable' content='yes'>
-    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
-    <meta name='apple-mobile-web-app-title' content='Animecream'>
-    <meta name='application-name' content='Animecream'>
+    
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Animecream">
@@ -100,9 +96,27 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.ico">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-icon-192x192.ico">
+    <link rel="manifest" href="./manifest.json">
     <link rel="canonical" href="https://www.animecream.com/producciones"/>
+
+    <link rel="shortcut icon" type="image/png" href="./img/icon/android-icon-128x128.png">
+    <link rel="apple-touch-icon" href="./img/icon/android-icon-128x128.png">
+    <link rel="apple-touch-startup-image" href="./img/icon/android-icon-128x128.png">
+   
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='apple-mobile-web-app-title' content='Animecream'>
+    <meta name='application-name' content='Animecream'>
+
+    
+    
+    
+
     <?= $this->Html->meta('icon') ?>
     <?= $this->fetch('meta') ?>
     <?= $this->Html->css(['bootstrap.min','animecream','select2'])?>

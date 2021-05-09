@@ -3,68 +3,72 @@
   "name": "La crema del anime",
   "icons": [
     {
-     "src": "img/icon/android-icon-32x32.png",
+     "sr./c": "img/icon/android-icon-32x32.png",
      "sizes": "32x32",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-36x36.png",
+     "src": "./img/icon/android-icon-36x36.png",
      "sizes": "36x36",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-48x48.png",
+     "src": "./img/icon/android-icon-48x48.png",
      "sizes": "48x48",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-72x72.png",
+     "src": "./img/icon/android-icon-72x72.png",
      "sizes": "72x72",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-96x96.png",
+     "src": "./img/icon/android-icon-96x96.png",
      "sizes": "96x96",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-128x128.png",
+     "src": "./img/icon/android-icon-128x128.png",
      "sizes": "128x128",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-144x144.png",
+     "src": "./img/icon/android-icon-144x144.png",
      "sizes": "144x144",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-152x152.png",
+     "src": "./img/icon/android-icon-152x152.png",
      "sizes": "152x152",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-192x192.png",
+     "src": "./img/icon/android-icon-192x192.png",
      "sizes": "192x192",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-     "src": "img/icon/android-icon-256x256.png",
+     "src": "./img/icon/android-icon-256x256.png",
      "sizes": "256x256",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-      "src": "img/icon/android-icon-384x384.png",
+      "src": "./img/icon/android-icon-384x384.png",
      "sizes": "384x384",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
     },
     {
-      "src": "img/icon/android-icon-512x512.png",
+      "src": "./img/icon/android-icon-512x512.png",
      "sizes": "512x512",
-     "type": "imageimg/icon/png"
+     "type": "image/png"
    }
  ],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "./?utm_source=homescreen",
   "background_color": "#105969",
   "display": "standalone",
-  "theme_color": "#105969"
+  "scope": "./",
+  "orientation": "portrait",
+  "theme_color": "#105969",
+  "description": "Lo mejor del anime"
+
 }

@@ -1,74 +1,81 @@
-const version = "1.1.12";
-const cacheName = `animecream-${version}`;
+const VERSION = "1.1.13";
+const CACHE_NAME = `animecream-${VERSION}`;
 
-var images = [];
-for(var i=1; i<434; i++) {
-  images.push('/img/tarjeta/'+ i +'.jpg');
+const IMAGENES = [];
+for (let i = 1; i < 435; i++) {
+    IMAGENES.push("./img/tarjeta/" + i + ".jpg");
 }
+
 appShellFiles = [
-        `/`,
-        `/index.php`,
-        `/js/jquery-2.2.4.min.js`,
-        `/js/jquery-ui.min.js`,
-        `/js/bootstrap.min.js`,
-        `/js/animecream.js`,
-        `/js/filesaver.js`,
-        `/js/html2canvas.js`,
-        `/js/app.js`,
-        `/js/app2.js`,
-        `/css/bootstrap.min.css`,
-        `/css/animecream.css`,
-        `/css/jquery-ui.min.css`,
-        `/css/app.css`,
-        `/css/app2.css`
+    `./`,
+    `./index.php`,
+    `./favicon.ico`,
+    `./manifest.json`,
+    `./sw.js`,
+    `./android-icon-192x192.ico`,
+    `./js/jquery-2.2.4.min.js`,
+    `./js/jquery-ui.min.js`,
+    `./js/bootstrap.min.js`,
+    `./js/animecream.js`,
+    `./js/filesaver.js`,
+    `./js/html2canvas.js`,
+    `./js/app.js`,
+    `./js/app2.js`,
+    `./css/bootstrap.min.css`,
+    `./css/animecream.css`,
+    `./css/jquery-ui.min.css`,
+    `./css/app.css`,
+    `./css/app2.css`,
 ];
 
+let contentToCache = appShellFiles.concat(IMAGENES);
 
-contentToCache = appShellFiles.concat(images);
-
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll(contentToCache)
-          .then(() => self.skipWaiting());
-    })
-  );
+self.addEventListener("install", (e) => {
+    e.waitUntil(
+        caches
+            .open(CACHE_NAME)
+            .then((cache) => {
+                return cache
+                    .addAll(contentToCache)
+                    .then(() => self.skipWaiting());
+            })
+            .catch((err) => console.log("Falló registro de cache", err))
+    );
 });
 
-self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+//una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
+self.addEventListener("activate", (e) => {
+    const cacheWhitelist = [CACHE_NAME];
+
+    e.waitUntil(
+        caches
+            .keys()
+            .then((cacheNames) => {
+                return Promise.all(
+                    cacheNames.map((cacheName) => {
+                        //Eliminamos lo que ya no se necesita en cache
+                        if (cacheWhitelist.indexOf(cacheName) === -1) {
+                            return caches.delete(cacheName);
+                        }
+                    })
+                );
+            })
+            // Le indica al SW activar el cache actual
+            .then(() => self.clients.claim())
+    );
 });
 
-   
-
-
-self.addEventListener('fetch', (e) => {
-    console.log('[Servicio Worker] Recurso obtenido ' + e.request.url);
+//cuando el navegador recupera una url
+self.addEventListener("fetch", (e) => {
+    //Responder ya sea con el objeto en caché o continuar y buscar la url real
+    e.respondWith(
+        caches.match(e.request).then((res) => {
+            if (res) {
+                //recuperar del cache
+                return res;
+            }
+            //recuperar de la petición a la url
+            return fetch(e.request);
+        })
+    );
 });
-
-
-
-/*self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((r) => {
-          console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
-      return r || fetch(e.request).then((response) => {
-                return caches.open(cacheName).then((cache) => {
-          console.log('[Servicio Worker] Almacena el nuevo recurso: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
-  );
-});*/
-
-/*self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.open(cacheName)
-      .then(cache => cache.match(event.request, {ignoreSearch: true}))
-      .then(response => {
-      return response || fetch(event.request);
-    })
-  );
-});*/
