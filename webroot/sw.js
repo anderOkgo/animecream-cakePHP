@@ -1,12 +1,13 @@
-const VERSION = "1.1.13";
+const VERSION = "1.1.17";
 const CACHE_NAME = `animecream-${VERSION}`;
+const imagenes = [];
+const appfiles = [];
 
-const IMAGENES = [];
-for (let i = 1; i < 435; i++) {
-    IMAGENES.push("./img/tarjeta/" + i + ".jpg");
+for (let i = 1; i <= 435; i++) {
+    imagenes.push(`./img/tarjeta/${i}.jpg`);
 }
 
-appShellFiles = [
+appfiles = [
     `./`,
     `./index.php`,
     `./favicon.ico`,
@@ -28,7 +29,7 @@ appShellFiles = [
     `./css/app2.css`,
 ];
 
-let contentToCache = appShellFiles.concat(IMAGENES);
+let contentToCache = appfiles.concat(imagenes);
 
 self.addEventListener("install", (e) => {
     e.waitUntil(
