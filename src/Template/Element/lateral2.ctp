@@ -15,24 +15,7 @@
     </div>
 
 
-    <div id="zona3" class="targetalateral">
-      <div class="bs-example" data-example-id="simple-nav-stacked">
-       <div class="contenedor">
-        <div class="cabecera">Mis listas</div>
-        <div id="zona2" class="zona">
-          <label class="principalPage" for="selector">seleccione</label>
-          <select id="selector" name="listas"></select>
-        </div>
-        <label class="principalPage" for="inpAgregar">Agregar</label>
-        <input placeholder="Escribe el nombre de la lista" id="inpAgregar" type="text" maxlength="30" required>
-        <button id="agregarLista" class=" btn-sm">Agregar lista</button>
-        <ol id="sortable">  </ol>
-        <button id="actualizar" class=" btn-sm">Guardar</button>
-        <button id="ordenar" class=" btn-sm">Modificar</button>
-        <button id="cancelar" class=" hidden btn-sm">Cancelar</button>
-        <button id="borrar" class=" btn-sm">Borrar lista</button>
-      </div>
-    </div>
+
   </div>
 
   <div class="targetalateral">

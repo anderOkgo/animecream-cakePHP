@@ -16,7 +16,7 @@ header("Last-Modified: " . "Wed, 05 mmay 2021 17:55:10 GMT");
 /*if($_SERVER['SERVER_PORT'] != '443') {
   $url=str_replace("www.", "", $_SERVER['HTTP_HOST']);
   $url=$url.$_SERVER['REQUEST_URI'];
-  header('Location: https://www.'.$url  ); exit(); 
+  header('Location: https://www.'.$url  ); exit();
 
 }*/
 
@@ -74,9 +74,9 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <meta property="og:image:width" content="417">
     <meta property="og:image:height" content="600">
     <meta property="og:description" content="♡ Top 100 anime all time, Veo que estás buscando RECOMENDACIONES de anime. [ shonen - shojo - romántico ♡ etc ], ¿Quizás los mejores animes de y desde siempre?.  Tenemos todas las clasificaciones, Top 10 - recomendaciones de lo mejor cada año, etc. ¡ADEMAS!  ✏ Crea tus propias listas e imágenes de estas, guárdalas, compártelas y MUCHO MAS...  ¡Dale un vistazo!  se que te va a gustar.  ¡VAMOS! entra y nos cuentas tu experiencia y si has encontrado tus mejores animes, [BIENVENID@S].">
-    
-    
-    
+
+
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Animecream">
     <meta name="twitter:site" content="https://www.animecream.com">
@@ -95,7 +95,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <meta name="description" content="♡ Top 100 anime all time, Veo que estás buscando RECOMENDACIONES de anime. [ shonen - shojo - romántico ♡ etc ], ¿Quizás los mejores animes de y desde siempre?.  Tenemos todas las clasificaciones, Top 10 - recomendaciones de lo mejor cada año, etc. ¡ADEMAS!  ✏ Crea tus propias listas e imágenes de estas, guárdalas, compártelas y MUCHO MAS...  ¡Dale un vistazo!  se que te va a gustar.  ¡VAMOS! entra y nos cuentas tu experiencia y si has encontrado tus mejores animes, [BIENVENID@S]."/>
 
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-icon-192x192.ico">
     <link rel="manifest" href="./manifest.json">
     <link rel="canonical" href="https://www.animecream.com/producciones"/>
@@ -103,7 +103,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <link rel="shortcut icon" type="image/png" href="./img/icon/android-icon-128x128.png">
     <link rel="apple-touch-icon" href="./img/icon/android-icon-128x128.png">
     <link rel="apple-touch-startup-image" href="./img/icon/android-icon-128x128.png">
-   
+
 
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
@@ -113,9 +113,9 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <meta name='apple-mobile-web-app-title' content='Animecream'>
     <meta name='application-name' content='Animecream'>
 
-    
-    
-    
+
+
+
 
     <?= $this->Html->meta('icon') ?>
     <?= $this->fetch('meta') ?>
@@ -134,10 +134,10 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     </span>
 </button>
 
-<aside class="panelx ">
+<aside class="panelx">
   <br>
   <div class="container">
-    <?php echo  $this->element('lateral'); ?>
+    <?php echo  $this->element('lateral2'); ?>
   </div>
 </aside>
     <nav>
@@ -197,7 +197,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
            <?= $this->Html->link('Salir', ['controller' => 'Users', 'action' => 'logout']) ?>
          </li>
         <?php else:  ?>
-          
+
         <?php  endif; ?>
 
         </ul>
@@ -216,7 +216,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
         </button>
         <a class="navbar-brand " href="#">Animecream</a>
       </div>
-  </div> 
+  </div>
   <div class="jumbotron text-center">
   	<h1 class="insetshadow">Animecream<span class="rotar"><a aria-label="sigueme en" href="https://www.youtube.com/channel/UC1tCm6nZothAhbp_9dFzmNQ" target="_blank" rel="noopener"></a></span></h1>
   	<p>¡Las mejores RECOMENDACIONES de anime!</p>
@@ -236,7 +236,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     </script>
 
 <script src="/js/index_dom.js" type="module"></script>
-  
+
 
     <?= $this->Flash->render() ?>
     <div class="container">
