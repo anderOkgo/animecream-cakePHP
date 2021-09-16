@@ -3,12 +3,11 @@ const CACHE_NAME = `animecream-${VERSION}`;
 const imagenes = [];
 let appfiles = [];
 
-for (let i = 1; i <= 435; i++) {
+for (let i = 1; i <= 456; i++) {
     imagenes.push(`./img/tarjeta/${i}.jpg`);
 }
 
 appfiles = [
-    `./`,
     `./index.php`,
     `./favicon.ico`,
     `./manifest.json`,
