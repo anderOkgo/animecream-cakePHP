@@ -45,6 +45,9 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
   });*/
 </script>
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"crossorigin="anonymous">
+</script>
+
 <!-- <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script> -->
