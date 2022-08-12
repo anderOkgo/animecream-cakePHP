@@ -153,23 +153,23 @@
 
             </div>
 
-           <!--  <div class="targetalateral">
-              <amp-auto-ads type="adsense"
-                data-ad-client="ca-pub-2618982977638862">
-              </amp-auto-ads> -->
+<div class="targetalateral">
+     
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"
+          crossorigin="anonymous"></script>
+     <!-- AsideLateral -->
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-3195928796594139"
+          data-ad-slot="9885418014"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
 
-            <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="ca-pub-2618982977638862"
-                 data-ad-slot="4321050829"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script> -->
+</div>
 
-           <!--  </div> -->
 
             <script>
               var code=$("#lateral").html();

@@ -45,6 +45,9 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
   });*/
 </script>
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"crossorigin="anonymous">
+</script>
+
 <!-- <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script> -->
@@ -66,6 +69,8 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 
     gtag('config', 'UA-113312665-1');
   </script>
+
+
     <?= $this->Html->charset() ?>
     <meta property="og:title" content="Animecream">
     <meta property="og:type" content="website">
@@ -236,6 +241,27 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     </script>
 
 <script src="/js/index_dom.js" type="module"></script>
+
+
+<script>
+
+		$(document).ready(function(){
+			setTimeout("checkAds();", 15000);
+			setTimeout("checkAds2();", 14980);
+		});
+		
+		function checkAds2() {
+		    if ($(" .targetalateral > .adsbygoogle").height() == "0") {
+				$(" .targetalateral > .adsbygoogle").html('anime');
+			}
+		}
+
+		function checkAds() {
+			if ($(" .targetalateral > .adsbygoogle").height() == "0") {
+				$("h1, h2, h3, h4").after("<br /><div class='alt'><h3>Adblocker Incompatible con nuestra automatizacion, Por favor desactivar!!  </h3><p><b>Posiblemente tienes Adblock Plus activado</p><p></p></b></div>");
+			}
+		}
+</script>
 
 
     <?= $this->Flash->render() ?>
