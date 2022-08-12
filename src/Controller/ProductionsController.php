@@ -30,7 +30,7 @@ class ProductionsController extends AppController
 
  public $paginate = [
        /* 'fields' => ['Productions.id', 'Productions.qualification'],*/
-        'limit' => 25
+        'limit' => 10
         /*'order' => [
             'Productions.qualification' => 'asc'*
         ]*/
@@ -151,7 +151,7 @@ class ProductionsController extends AppController
     {
       $this->paginate = [
             'contain' => ['Genres', 'Demographics', 'Titles'],
-            'limit'=>25
+            'limit'=>10
 
         ];
         $this->appProcess($id,10);
