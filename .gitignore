@@ -6,7 +6,9 @@
 # Node artifact files
 node_modules/
 dist/
+logs/
 
+.ftpquota
 config/app.php
 tmp/
 webroot/img/tarjeta/
