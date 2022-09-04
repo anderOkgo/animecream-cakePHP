@@ -258,7 +258,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 
 		function checkAds() {
 			if ($(" .targetalateral > .adsbygoogle").height() == "0") {
-				$("h1, h2, h3, h4").after("<div class='alt'><h3>Adblocker Incompatible con nuestra automatizacion, Por favor desactivar! </h3></div>");
+				$("h1, h2, h3").after("<div class='alt'><h5>Adblocker Incompatible con nuestra automatizacion, Por favor desactivar! </h5></div>");
 			}
 		}
 </script>
