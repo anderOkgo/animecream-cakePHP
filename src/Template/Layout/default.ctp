@@ -246,10 +246,10 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 <script>
 
 		$(document).ready(function(){
-			setTimeout("checkAds();", 15000);
-			setTimeout("checkAds2();", 14980);
+			setTimeout("checkAds2();", 14500);
+            setTimeout("checkAds();", 15000);
 		});
-		
+
 		function checkAds2() {
 		    if ($(" .targetalateral > .adsbygoogle").height() == "0") {
 				$(" .targetalateral > .adsbygoogle").html('anime');
@@ -258,7 +258,7 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 
 		function checkAds() {
 			if ($(" .targetalateral > .adsbygoogle").height() == "0") {
-				$("h1, h2, h3, h4").after("<br /><div class='alt'><h3>Adblocker Incompatible con nuestra automatizacion, Por favor desactivar!!  </h3><p><b>Posiblemente tienes Adblock Plus activado</p><p></p></b></div>");
+				$("h1, h2, h3, h4").after("<div class='alt'><h3>Adblocker Incompatible con nuestra automatizacion, Por favor desactivar! </h3></div>");
 			}
 		}
 </script>
