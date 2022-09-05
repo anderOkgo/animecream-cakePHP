@@ -12,7 +12,11 @@
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
-header("Last-Modified: " . "Sun, 03 Sep 2022 00:55:10 GMT");
+header("Last-Modified: " . "Sun, 05 Sep 2022 00:55:10 GMT");
+
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Mon, 05 Sep 2022 09:40:00 GMT");
+header("Content-Type: application/xml; charset=utf-8");
 /*if($_SERVER['SERVER_PORT'] != '443') {
   $url=str_replace("www.", "", $_SERVER['HTTP_HOST']);
   $url=$url.$_SERVER['REQUEST_URI'];
