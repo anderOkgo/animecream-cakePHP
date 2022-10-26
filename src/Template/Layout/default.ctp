@@ -250,8 +250,8 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
 <script>
 
 		$(document).ready(function(){
-			setTimeout("checkAds2();", 14500);
-            setTimeout("checkAds();", 15000);
+			//setTimeout("checkAds2();", 14500);
+            //setTimeout("checkAds();", 15000);
 		});
 
 		function checkAds2() {

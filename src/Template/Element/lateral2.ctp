@@ -7,7 +7,9 @@
           <div class="centrar2">
             <span title="YouTube: Ander Innervideo" class="you"><a aria-label="sigueme en" href="https://www.youtube.com/channel/UC1tCm6nZothAhbp_9dFzmNQ" target="_blank" rel="noopener"></a></span>
             <span title="YouTube: Ander Okgo" class="okgo"><a aria-label="sigueme en" href="https://www.youtube.com/channel/UC1vwlA2l20nsH2XcyM891hw" target="_blank" rel="noopener"></a></span>
-            <span title="Knight of Lamunes DX" class="g"><a aria-label="sigue este proyecto" href="https://mega.nz/#F!zwRkFapJ!V9IPs45HUUyb4BFbRdWlPA" target="_blank" rel="noopener"></a></span>
+            <span title="Knight of Lamunes DX" class="g"><a aria-label="sigue este proyecto" href="https://drive.google.com/drive/folders/1zhKVFFh1K_PR5QsMyStCcIJ_zuCU4Xot" target="_blank" rel="noopener"></a></span>
+          </div>
+          <div class="centrar2">
             <span title="Modo Cuadricula" class="g2"></span>
           </div>
         </div>
@@ -154,7 +156,7 @@
             </div>
 
 <div class="targetalateral">
-     
+
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"
           crossorigin="anonymous"></script>
      <!-- AsideLateral -->
