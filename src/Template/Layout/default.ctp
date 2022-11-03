@@ -12,7 +12,7 @@
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
-header("Last-Modified: " . "Sun, 05 Sep 2022 00:55:10 GMT");
+header("Last-Modified: " . "Tue, 03 Nov 2022 10:55:10 GMT");
 
 header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Mon, 05 Sep 2022 09:40:00 GMT");
@@ -49,8 +49,8 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
   });*/
 </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"crossorigin="anonymous">
-</script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"crossorigin="anonymous">
+</script> -->
 
 <!-- <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
@@ -70,7 +70,6 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-113312665-1');
   </script>
 
@@ -89,12 +88,12 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Animecream">
     <meta name="twitter:site" content="https://www.animecream.com">
-    <meta name="twitter:creator" content="@AnderOkgo">
+    <meta name="twitter:creator" content="@Anderokgo">
     <meta name="twitter:image" content="https://www.animecream.com/img/tarjeta/AnimecreamTargetaSEO.png">
     <meta name="twitter:description" content="♡ Top 100 anime all time, Veo que estás buscando RECOMENDACIONES de anime. [ shonen - shojo - romántico ♡ etc ], ¿Quizás los mejores animes de y desde siempre?.  Tenemos todas las clasificaciones, Top 10 - recomendaciones de lo mejor cada año, etc. ¡ADEMAS!  ✏ Crea tus propias listas e imágenes de estas, guárdalas, compártelas y MUCHO MAS...  ¡Dale un vistazo!  se que te va a gustar.  ¡VAMOS! entra y nos cuentas tu experiencia y si has encontrado tus mejores animes, [BIENVENID@S].">
 
     <meta name="Title" CONTENT="Animecream Las mejores RECOMENDACIONES de anime">
-    <meta name="Author" CONTENT="Ander Innervideo">
+    <meta name="Author" CONTENT="Ander Innervideo Anderokgo">
     <meta name="Subject" CONTENT="Animecream">
     <meta name="Language" CONTENT="Spanish">
     <meta name="theme-color" content="#0a4656">
