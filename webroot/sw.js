@@ -1,4 +1,4 @@
-const VERSION = "1.1.17";
+const VERSION = "1.1.18";
 const CACHE_NAME = `animecream-${VERSION}`;
 const imagenes = [];
 let appfiles = [];
@@ -10,7 +10,6 @@ for (let i = 1; i <= 456; i++) {
 appfiles = [
     `./index.php`,
     `./favicon.ico`,
-    `./manifest.json`,
     `./sw.js`,
     `./android-icon-192x192.ico`,
     `./js/jquery-2.2.4.min.js`,

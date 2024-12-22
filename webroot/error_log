@@ -259,3 +259,9 @@
  in /home/operacio/animecream.com/config/requirements.php on line 31
 [05-Mar-2021 22:28:28 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/animecre/public_html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php on line 1963
 [05-Mar-2021 22:40:42 UTC] PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /home/animecre/public_html/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php on line 1963
+[21-Dec-2024 21:58:41 America/Bogota] PHP Fatal error:  You must enable the intl extension to use CakePHP.
+ in /home/animecre/public_html/config/requirements.php on line 31
+[21-Dec-2024 21:58:43 America/Bogota] PHP Fatal error:  You must enable the intl extension to use CakePHP.
+ in /home/animecre/public_html/config/requirements.php on line 31
+[21-Dec-2024 21:58:57 America/Bogota] PHP Fatal error:  You must enable the intl extension to use CakePHP.
+ in /home/animecre/public_html/config/requirements.php on line 31
