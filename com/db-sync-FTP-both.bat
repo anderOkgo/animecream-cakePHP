@@ -5,7 +5,7 @@ IF EXIST setter.bat (CD.. & CALL com\setter.bat) ELSE ( CALL com\setter.bat )
   /command ^
     "open ftp://%FTPUsername.txt%:%FTPPss.txt%@%FTPserver.txt%" ^
     "option batch off" ^
-    "synchronize remote ""%LocalPath.txt%\webroot\img\tarjeta\"" /webroot/img/tarjeta/" ^
+    "synchronize both ""%LocalPath.txt%\webroot\img\tarjeta\"" /webroot/img/tarjeta/" ^
     "synchronize local ""%LocalPath.txt%\config\"" /config/" ^
     "synchronize remote ""%LocalPath.txt%\src\"" /src/" ^
     "synchronize remote ""%LocalPath.txt%\webroot\"" /webroot/" ^
