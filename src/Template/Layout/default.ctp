@@ -49,22 +49,22 @@ if(isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])){
   });*/
 </script>
 
-<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"crossorigin="anonymous">
-</script> -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3195928796594139"crossorigin="anonymous">
+</script>
 
-<!-- <script async custom-element="amp-auto-ads"
+<script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script> -->
+</script>
 
-<!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<!--   <script>
+  <script>
   	if (location.protocol != 'https:')
 	{
 	 location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 	}
-  </script> -->
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113312665-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
